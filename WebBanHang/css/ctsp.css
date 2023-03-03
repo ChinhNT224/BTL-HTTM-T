@@ -1,0 +1,284 @@
+.ctsp{
+    display: flex;
+    background-image: url(/assets/img/logo1.png);
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 4px 20px rgb(46, 44, 44);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.ctsp__show{
+    margin:50px 30px ;
+    width: 460px;
+    overflow: hidden;
+    border-radius: 4px ;
+    position: relative;
+}
+.ctsp__show-chuyen{
+    width: 9999px;
+    transition: all 0.5s;
+}
+.ctsp__show-chuyen img{
+ height: 460px;
+ width: 460px;
+ float: left;    
+ 
+}
+.dieuhuong{
+    cursor: pointer;
+    position: absolute;
+    color: #4e49498a;
+    font-size: 2rem;
+    top: 40%;
+    margin-left: 20px;
+}
+.dieuhuong i:last-child{
+   position: absolute;
+   left: 390px;
+}
+.ctsp__text{
+    margin:50px 0px ;
+    flex: 2;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);   
+}
+.sp__name{
+    color: #000;
+    text-align:justify;
+    font-size: 4.5rem;
+    margin: 10px;
+}
+
+.price{
+    color: red;
+    text-align:center;
+    font-size: 5.0rem;
+    margin: 10px;
+}
+
+.now-detail-restaurant .rating {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.rating {
+    font-size: 50px;
+    vertical-align: middle;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.sp__label{
+    color: #000;
+    font-size: 1rem;
+    margin: 10px;
+}
+.phancach{
+    border: 1px solid black;
+    margin: 4px 0;
+}
+.sp__thongtin{
+    font-size: 1.2rem;
+    font-weight: 350;
+    display: flex;
+    margin: 10px;
+    color: rgb(76, 69, 69);
+}
+.sp__thongtin-tt{
+    font-weight: 530;
+    color: #000;
+}
+.sp__link{
+    margin: 10px;
+}
+.sp__link-icon{
+    color: #43982a;
+}
+.sp__link a{
+    color: #43982a  ;
+    text-decoration: none;
+}
+/* phanfaf nút chọn cỡ  */
+.btn__size{
+    background-color: floralwhite;
+    border: 2px solid #979797;
+    margin: 10px;
+}
+.btn__size-header{
+    font-weight: 500;
+}
+.btn__size-lable--btn{
+    margin-top: 10px;
+    min-width: 40px;
+    height: 40px;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    outline: none;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    display: inline-flex;
+}
+.btn__size-lable :hover{
+    background-color:rgb(228, 105, 105);
+    border: 1px solid rgb(255, 230, 0);
+}
+.btn__buy{
+    margin: 20px;
+}
+.btn__buy-lable--btn{
+    min-width: 300px;
+    height: 55px;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 2.2rem;
+    outline: none;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    display: inline-flex;
+    border: 1px solid black ;
+}
+.btn__buy .btn__buy-primar {
+    color: white;
+    
+    border-radius: 10px;
+    background: orange;
+  }
+.btn__buy-lable--btn:hover{
+      background-color: rgba(0, 0, 0, 0.171);
+  }
+  /* phần icon  */
+  .ctsp__text-socicals{
+    background-color: #F5F5F5;
+    padding: 12px 36px;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 24px;
+}
+.ctsp__text-socicals-icon{
+    font-size: 1.2rem;
+}
+.ctsp__text-socicals-facebook{
+    color: white;
+    background-color: #3a5a98;
+    text-align: center;
+    padding-top: 12px;
+}
+.ctsp__text-socicals-title{
+    margin: 0 30px;
+}
+.ctsp__text-socicals-facebook
+.ctsp__text-socicals-icon{
+    color: white;
+}
+.ctsp__text-socicals-gg{
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+.ctsp__text-socicals-is{
+    background-color: rgb(247, 118, 161);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.ctsp__text-socicals-yt{
+    background-color: white;
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+.lienhe{
+    margin: 10px;
+}
+.lienhe__contein{
+    font-size:1.2rem ;
+}
+.sp__lienhe{
+    display: flex;
+}
+.sp__lienhe-tt{
+    font-weight: 530;
+    color: #000;
+}
+.sp__lienhe-link{
+    text-decoration: none;
+    color: rgb(8, 110, 226);
+}
+.all{
+    display: flex;
+    background-color: rgb(243, 234, 217);
+}
+
+.new{
+    flex: 3;
+}
+.new__body{
+    display: inline-flex;
+}
+.new__header{
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
+    border-radius:3px ;
+}
+.new__new-text{
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 400;
+    line-height: 1.8rem;
+    height: 3.6rem;
+    margin: 10px 10px 10px 4px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2 ;
+}
+.new__new{
+    /* display: flex; */
+}
+.new__new-img img{
+    width: 100px;
+    height: 100px;
+}
+.new__new-text-content{
+    text-decoration: none;
+    color: rgb(255, 1, 1);
+    font-size: 1rem;
+}
+.sp__lienquan{
+    margin-top: 10px;
+    width: 400px;
+    flex: 1;
+ }
+.sp__lienquan-header{
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: #1d749c;
+}
+.sp__lienquan-body{
+    margin-left: 80px;
+    margin-right: 10px;
+    /* display: flex; */
+}
+
+

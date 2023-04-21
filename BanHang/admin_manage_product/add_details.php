@@ -43,6 +43,10 @@ $row = mysqli_fetch_assoc($result);
                                 <input type="text" name="codeP" placeholder="" required>
                             </div>
                             <div class="form-group">
+                                <span class=""> Số lượng</span>
+                                <input type="number" name="quantity" placeholder=""></input>
+                            </div>
+                            <div class="form-group">
                                 <span class=""> Giá</span>
                                 <input type="number" name="price" placeholder=""></input>
                             </div>
@@ -63,6 +67,7 @@ $row = mysqli_fetch_assoc($result);
 
                         //initialise the variable       
                         $codeP = $_POST['codeP'];
+                        $quantity = $_POST['quantity'];
                         $price = $_POST['price'];
 
                         //find the info of the category that has been previously saved
@@ -90,8 +95,8 @@ $row = mysqli_fetch_assoc($result);
                             exit();
                         } //insert into database
                         else{
-                            $sql2 = "INSERT INTO product (CategoryID, ProductID, ProductName, Price)
-                            VALUES ('$codeC', '$codeP','$nameC', '$price')";
+                            $sql2 = "INSERT INTO product (CategoryID, ProductID, ProductName, ProductQuantity, Price)
+                            VALUES ('$codeC', '$codeP','$nameC', $quantity, '$price')";
                             $query2 = mysqli_query($con, $sql2);
                             echo "<script> alert('Sản Phẩm Đã Được Thêm');
                             window.location.href = 'manage_category.php';</script>";

@@ -1,3 +1,8 @@
+<?php
+session_start();
+if (isset($_SESSION['id'])) { 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -5,7 +10,7 @@
     <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Trang chủ</title>
+        <title>HemDecor </title>
 
         <!-- font  cdn link  -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -13,27 +18,27 @@
         <link rel="stylesheet" href="../css/user.css?v=<?php echo time(); ?>">
     </head>
     <body>
-        <?php include '../header_footer/header.php'; ?>    
-        <div class = "bg"><img src="../images/homepage/thumb_an_vat_sai_gon_a61e9b6e61.jpg" class="background"></div>
+        <?php include '../header_footer/user_header.php'; ?>           
+        <div class = "bg"><img src="../images/homepage/do-an-vat-han-quoc.jpg" class="background"></div>
 
         <div class="heading"> Sản phẩm </div>
         <section class = "product">
             <div class = "row">
                 <div class = "column">
-                    <a href = "../user_account/login.php"><img src = "../images/homepage/Đồ ăn.png" class ="cate" width = "400" height = "400"></a>
+                    <a href = "../user_products/Đồ ăn.php"><img src = "../images/homepage/Đồ ăn.png" class ="cate" width = "400" height = "400"></a>
                     <div class = des>Đồ ăn</div>
                 </div>
                 <div class = "column">
-                    <a href = "../user_account/login.php"><img src = "../images/homepage/Đồ uống.png" class ="cate" width = "400" height = "400"></a>
+                    <a href = "../user_products/Đồ uống.php"><img src = "../images/homepage/Đồ uống.png" class ="cate" width = "400" height = "400"></a>
                     <div class = des>Đồ uống</div>
                 </div>
                 <div class = "column">
-                    <a href = "../user_account/login.php"><img src = "../images/homepage/Tráng_miệng-removebg-preview.png" class ="cate" width = "400" height = "400"></a>
+                    <a href = "../user_products/Tráng miệng.php"><img src = "../images/homepage/Tráng_miệng-removebg-preview.png" class ="cate" width = "400" height = "400"></a>
                     <div class = des>Tráng miệng</div>
                 </div>
             </div>        
         </section>  
-        
+
         <div class="heading"> Sản phẩm bán chạy </div>
         <section class = "customer">
         <div class = "slider">
@@ -72,10 +77,10 @@
                 <!--DOUBLE-->
 
                 <a href = "../đồ ăn/Cơm chiên hải sản.html">
-                <div class = "slide">
-                    <img src = '../images/Cơm chiên hải sản.jpg'>
-                    <div class = "cus-name">Cơm chiên hải sản</div>
-                </div></a>
+                    <div class = "slide">
+                        <img src = '../images/Cơm chiên hải sản.jpg'>
+                        <div class = "cus-name">Cơm chiên hải sản</div>
+                    </div></a>
                 <a href = "../đồ ăn/Cơm chiên xúc xích.html">
                     <div class = "slide">
                         <img src = '../images/Cơm chiên xúc xích.jpg'>
@@ -96,7 +101,7 @@
                         <img src = '../images/Cơm tấm thịt nướng.jpg'>
                         <div class = "cus-name">Cơm tấm thịt nướng</div>
                     </div></a>
-                <a href = "../đồ uống/#">
+                <a href = "../đồ uống/Coca Cola.html">
                     <div class = "slide">
                         <img src = '../images/Coca Cola.jpg'>
                         <div class = "cus-name">Coca Cola</div>
@@ -104,7 +109,12 @@
             </div>
         </div>
         </section>
-
-        <div><?php include '../header_footer/footer.php'; ?></div>
+        <div><?php include '../header_footer/user_footer.php'; ?></div>
     </body>
 </html>
+<?php 
+}else{
+     header("Location: login.php");
+     exit();
+}
+ ?>

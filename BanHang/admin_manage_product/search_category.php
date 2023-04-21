@@ -4,9 +4,9 @@ include('../database/dbcon.php');
 include '../header_footer/admin_header.php';
 if(count($_POST)>0) {
     $category=$_POST['keyword'];
-    $result = mysqli_query($con,"SELECT c.CategoryID AS CategoryID, ThumbnailImage, CategoryName, Material, SUM(ProductQuantity) AS Quantity FROM `Categories` c 
+    $result = mysqli_query($con,"SELECT c.CategoryID AS CategoryID, ThumbnailImage, CategoryName, SUM(ProductQuantity) AS Quantity FROM `Categories` c 
     INNER JOIN product p ON c.CategoryID = p.CategoryID 
-    WHERE c.CategoryID LIKE '%$category%' OR CategoryName LIKE '%$category%' OR Material LIKE '%$category%'                     
+    WHERE c.CategoryID LIKE '%$category%' OR CategoryName LIKE '%$category%' LIKE '%$category%'                     
     GROUP BY p.CategoryID ORDER BY c.CategoryID;");
     $num = mysqli_num_rows($result);
     $page = $num / 7 + 1;
@@ -63,8 +63,7 @@ if(count($_POST)>0) {
                                 </script>                                                                                          
                                 <th>Mã</th>
                                 <th>Ảnh</th>
-                                <th>Phân Loại</th>                                
-                                <th>Chất Liệu</th>
+                                <th>Tên sản phẩm</th>                                
                                 <th>Số Lượng</th>                                
                                 <th>Thao Tác</th>
                             </tr>
@@ -80,13 +79,12 @@ if(count($_POST)>0) {
                                 <th>
                                     <?php 
                                     //create img path
-                                    $cp =  "../imgages/".$row['ThumbnailImage'];;
+                                    $cp =  "../images/".$row['ThumbnailImage'];;
                                     ?>
                                     <!-- display img -->
                                     <img src="<?php echo $cp ?>" width="100">
                                 </th>
                                 <th><?php echo $row['CategoryName']; ?></th>                                
-                                <th><?php echo $row['Material']; ?></th>
                                 <th><?php echo $row['Quantity']; ?></th>                                                               
                                 <th>
                                     <a href = ""><button type = "button" class = "fa fa-eye"></button></a>

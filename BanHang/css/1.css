@@ -1,0 +1,21 @@
+
+
+/* Thiết lập kích thước và định dạng cho các tiêu đề */
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+/* Thiết lập kiểu định dạng cho bảng sản phẩm */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/* Thiết lập kiểu định dạng cho các ô trong bảng sản phẩm */
+th, td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ccc;
+}

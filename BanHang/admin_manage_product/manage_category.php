@@ -18,7 +18,7 @@ include '../header_footer/admin_header.php';
     <div class=main><?php include '../header_footer/admin_toggle.php'; ?>
         <div class="product_box">
             <div class="cardHeader">
-                <h2>Menu</h2>
+                <h2>DANH SÁCH SẢN PHẨM</h2>
             </div>
             <div class="border_bottom"></div>
             <form action="search_category.php" class="search-form" method="post">
@@ -30,7 +30,7 @@ include '../header_footer/admin_header.php';
                 <button type="submit" class="button button3" name="delete_all" onclick='return checkdelete()'><i class="fa fa-trash-o"> Xóa</i>
                 </button>                
                 <a href="storage.php">
-                    <button type="button" class="button button2"><i class="fa fa-archive"> Xem Chi Tiết Menu</i></button>
+                    <button type="button" class="button button2"><i class="fa fa-archive"> Xem Chi Tiết Kho</i></button>
                 </a>
                 <a href="add_basic.php">
                     <button type="button" class="button button1"><i class="fa fa-plus"> Thêm Mới</i></button>

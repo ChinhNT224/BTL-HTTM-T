@@ -36,6 +36,7 @@ include '../header_footer/admin_header.php';
                     <tr>
                         <th>Mã Sản Phẩm</th>
                         <th>Tên Sản Phẩm</th>
+                        <th>Số lượng</th>
                         <th>Giá</th>
                     </tr>
                 </thead>
@@ -74,7 +75,8 @@ include '../header_footer/admin_header.php';
                         <tr>
                             <th><?php echo $row['ProductID']; ?></th>
                             <th><?php echo $row['ProductName']; ?></th>
-                            <th><?php echo number_format($row['Price']); ?></th>
+                            <th><?php echo $row['ProductQuantity']; ?></th>
+                            <th><?php echo number_format($row['Price']); ?></th>   
                         </tr>
                     </tbody>
                 <?php

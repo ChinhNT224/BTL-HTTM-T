@@ -29,6 +29,7 @@ WHERE c.CategoryID = '$cid'";
 </head>
 
 <body>
+    
     <?php
     //create img path
     $img =  "../images/".$row['ThumbnailImage'];
@@ -65,10 +66,12 @@ WHERE c.CategoryID = '$cid'";
                     </a>
                     <a href="../pay/addcart.php?id=<?php echo $id?>&cid=<?php echo $cid; ?>&value=<?php echo 0?>"  style="text-decoration: none;">
                         <button class="btn__buy-lable--btn">THÊM VÀO GIỎ HÀNG</button>
-                    </a>            
+                    </a>        
                 </div>
-                
             </div>
+            <a href="../user_products/product_page.php"  style="text-decoration: none;">
+                        <button class="btn__buy-lable--btn">QUAY LẠI</button>
+            </a>   
         </div>
     </div>
 

@@ -11,7 +11,7 @@
 <body>
   <section>
     <div class="img">
-        <img src="../images/background4.jpg">
+        <img src="../images/background.jpg">
     </div>
     <div class="content">
       <div class="form">

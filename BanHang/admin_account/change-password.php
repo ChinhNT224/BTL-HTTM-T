@@ -15,7 +15,7 @@ if (isset($_SESSION['id'])) {
 <body>
   <section>
     <div class="img">
-        <img src="../images/background4.jpg">
+        <img src="../images/background3.jpg">
     </div>
     <div class="content">
       <div class="form">

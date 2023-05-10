@@ -16,8 +16,8 @@
 
         <header>
 
-            <a  href = "homepage.php"><img class="logo" src="../images/logo-an-vat.png" alt="logo"></a> 
-            <a  href = "homepage.php" class = "web_name" style="font-size:3vw;">FOOD WORLD</a>
+            <a  href = "homepage.php"><img class="logo" src="../images/restaurant.png" alt="logo"></a> 
+            <a  href = "homepage.php" class = "web_name" style="font-size:3vw;">PTITCuisine</a>
 
             <input type="checkbox" name="" id="toggler">
             <label for="toggler" class="fas fa-bars"></label>

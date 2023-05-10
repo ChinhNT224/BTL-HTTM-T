@@ -18,12 +18,11 @@ include('../database/dbcon.php');
 
         <header>
 
-            <a  href = "../user_homepage/user_homepage.php"><img class="logo" src="../images/logo-an-vat.png" alt="logo"></a> 
-            <a  href = "../user_homepage/user_homepage.php" class = "web_name" style="font-size:3vw;">FOOD WORLD</a>
+            <a  href = "../user_homepage/user_homepage.php"><img class="logo" src="../images/restaurant.png" alt="logo"></a> 
+            <a  href = "../user_homepage/user_homepage.php" class = "web_name" style="font-size:3vw;">PTITCuisine</a>
 
-            <form action="" class="search-form">
-                <input type="search" name="" placeholder="Tìm Kiếm" id="search-box">
-                <label for="search-box" class="fas fa-search"></label>
+            <form action="../user_products/user_search.php" method="get" class="search-form">
+                <input type="text" name="search" placeholder="Nhập để tìm kiếm..." id="search-box">
             </form>
 
             <input type="checkbox" name="" id="toggler">

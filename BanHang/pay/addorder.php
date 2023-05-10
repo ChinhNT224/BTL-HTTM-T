@@ -34,6 +34,7 @@ if (isset($_SESSION['id'])) {
             $search_product1 =  mysqli_fetch_assoc($search_product);
             $price_row = $search_product1['Price'];
             $insert_product = mysqli_query($con, "INSERT INTO `Order_Details`(`AccountID`, `ProductID`, `amount`, `Cost`, `CustomerName`, `CustomerPhoneNo`, `CustomerAddress`, `OrderID`) VALUES ('$id','$cid','$product_row','$price_row','$name','$tel','$address','$order_id')");
+            $update_warehouse = mysqli_query($con,"UPDATE Product SET ProductQuantity = ProductQuantity - $product_row WHERE ProductID = '$cid'");
         }
         $delete_product = mysqli_query($con,"DELETE FROM Cart WHERE AccountID = '$id'");
         if($delete_product){

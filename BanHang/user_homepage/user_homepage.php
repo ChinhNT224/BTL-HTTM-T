@@ -16,24 +16,57 @@ if (isset($_SESSION['id'])) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script src="https://kit.fontawesome.com/1147679ae7.js" crossrigin="" anonymous></script>
         <link rel="stylesheet" href="../css/user.css?v=<?php echo time(); ?>">
+        <style>
+            .slide img {
+                width: 200px;
+                height: 200px;
+            }
+        </style>
     </head>
     <body>
         <?php include '../header_footer/user_header.php'; ?>           
-        <div class = "bg"><img src="../images/homepage/do-an-vat-han-quoc.jpg" class="background"></div>
+        <div class="bg">
+            <img src="../images/homepage/yellow-cute-geometric-background-image_2762240.png" class="background" style="height: 500px;">
+        </div>
+        <div class="heading"> Giới Thiệu </div>
+      <section class = "about" id = "about">
+         <div class = "container">
+            <div class = "row align-items-center">
+               <div class = "col=md-6 image">
+                  <img src = "../images/intro.jpg" class = "intro_bg">
+               </div>
+               <div class = "col-md-6 content">
+                  <p>Học viện Công nghệ thông tin - PTIT không chỉ là nơi cung cấp kiến thức chuyên môn cho 
+                    sinh viên trong lĩnh vực Công nghệ thông tin, mà còn là một thế giới đa dạng về ẩm thực!
+                     <br>Tại PTIT, bạn có thể tìm thấy những quán ăn ngon, ấm cúng để thưởng thức các món ăn 
+                     truyền thống của Việt Nam và cả món ăn quốc tế được phục vụ bởi các nhà hàng, cửa hàng ăn uống tại khuôn viên trường. 
+                  </p>
+                  <p>Với sự đa dạng và phong phú của các món ăn, sinh viên có thể trải nghiệm vô vàn trải nghiệm ẩm thực độc đáo khi đến PTIT:
+                     <br>- Những món ăn bữa chính.
+                     <br>- Đồ uống, sinh tố giải khát.
+                     <br>- Những món tráng miệng, hoa quả nhiệt đới.
+                  </p>
+                  <a href = "../anon/about_us.php" >
+                     <div class = "more">Xem Tiếp</div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
 
         <div class="heading"> Sản phẩm </div>
         <section class = "product">
             <div class = "row">
                 <div class = "column">
-                    <a href = "../user_products/Đồ ăn.php"><img src = "../images/homepage/Đồ ăn.png" class ="cate" width = "400" height = "400"></a>
+                    <a href = "../user_products/Đồ ăn.php"><img src = "../images/homepage/bibimbap.png" class ="cate" width = "400" height = "400"></a>
                     <div class = des>Đồ ăn</div>
                 </div>
                 <div class = "column">
-                    <a href = "../user_products/Đồ uống.php"><img src = "../images/homepage/Đồ uống.png" class ="cate" width = "400" height = "400"></a>
+                    <a href = "../user_products/Đồ uống.php"><img src = "../images/homepage/cola.png" class ="cate" width = "400" height = "400"></a>
                     <div class = des>Đồ uống</div>
                 </div>
                 <div class = "column">
-                    <a href = "../user_products/Tráng miệng.php"><img src = "../images/homepage/Tráng_miệng-removebg-preview.png" class ="cate" width = "400" height = "400"></a>
+                    <a href = "../user_products/Tráng miệng.php"><img src = "../images/homepage/salad.png" class ="cate" width = "400" height = "400"></a>
                     <div class = des>Tráng miệng</div>
                 </div>
             </div>        

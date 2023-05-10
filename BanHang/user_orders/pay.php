@@ -1,66 +1,118 @@
 <?php
 session_start();
 include('../database/dbcon.php');
-if (isset($_GET['sp'])) { 
-$id = $_SESSION['id'];
-$sumSP = $_GET['sp'];
-$sumTien = $_GET['tien'];
+if (isset($_GET['sp'])) {
+    $id = $_SESSION['id'];
+    $sumSP = $_GET['sp'];
+    $sumTien = $_GET['tien'];
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh toán</title>
-    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="../css/style1.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/gioHang.css">
-</head>
-<body>
-<div class="content__down">
-                <div class="line"></div>
-                <h1 class="content__down-name">Hóa đơn</h1>
-                <div class="line"></div>       
-                <div class="row">
-                    <div class="row-left">Tổng sản phẩm:</div>
-                    <div class="row-right"><?php echo $sumSP; ?></div>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thanh toán</title>
+        <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <title>Klassy - PTIT Food</title>
+
+    <!-- Additional CSS Files -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+        <link rel="stylesheet" href="../css/templatemo-klassy-cafe.css">
+        <link rel="stylesheet" href="../css/owl-carousel.css">
+        <link rel="stylesheet" href="../css/lightbox.css">
+
+        <style>
+            .col-lg-6 {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+    <?php include '../header_footer/user_header.php'; ?> 
+        <section class="section" id="reservation">
+            <div class="container">
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <?php if (isset($_GET['error'])) { ?>
+                            <p class="error"><?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+                        <form id="contact" action="../pay/addorder.php?id=<?php echo $id ?>&&sp=<?php echo $sumSP ?>&&tien=<?php echo $sumTien ?>" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4>Hóa đơn</h4>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Họ và tên*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Địa chỉ Email" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="phone" type="text" id="phone" placeholder="Số điện thoại*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="address" type="text" id="address" placeholder="Địa chỉ*" required="">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <div>Tổng sản phẩm: <?php echo $sumSP; ?></div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <div>Tổng tiền thanh toán: <?php echo $sumTien; ?></div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" id="message" placeholder="Lời nhắn"></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button-icon" onclick="checkValid()">Thanh toán</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="row-left">Tổng tiền:</div>
-                    <div class="row-right"><?php echo $sumTien ?></div>
-                </div>   
-                <div class="line"></div>
-                <?php if (isset($_GET['error'])) { ?>
-                    <p class="error"><?php echo $_GET['error']; ?></p>
-                <?php } ?>
-        <form action = "../pay/addorder.php?id=<?php echo $id?>&&sp=<?php echo $sumSP ?>&&tien=<?php echo $sumTien?>" method = "post">
-            <div>
-                <div class="Thanhtoan">
-                    <h1 class="content__down-name">Điền thông tin</h1>
-                    <input id="name" name="name" type="text" class="auth-form__input" placeholder="Nhập họ và tên người nhận">
-                    <input id="phone" name="phone" type="text" class="auth-form__input" placeholder="Nhập số điện thoại">
-                    <input id="address" name="address" type="text" class="auth-form__input" placeholder="Nhập địa chỉ nhận hàng">
-                </div>
-                <div>
-                    <button id="btn___dn" onclick="checkValid()">Thanh Toán</button>
-                </div>
-            </div>      
-        </form>    
-     </div> 
+            </div>
+            </div>
+        </section>
+
         <script>
             function checkdelete() {
                 return confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?');
             }
         </script>
-        </section>
-</body>
-</html>
-<?php 
-}else{
-     header("Location: ../user_account/login.php");
-     exit();
+    </body>
+
+    </html>
+<?php
+} else {
+    header("Location: ../user_account/login.php");
+    exit();
 }
- ?>
+?>

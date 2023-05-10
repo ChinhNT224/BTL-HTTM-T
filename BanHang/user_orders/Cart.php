@@ -54,10 +54,16 @@ $sumTien = 0;
                         ?>
                          </div>
                         <div class="c3">
+                        <a href="../pay/removecart.php?id=<?php echo $id?>&cid=<?php echo $s1; ?>&value=<?php echo 0?>"  style="text-decoration: none;">
+                            <button class="btn__buy-lable-small--btn">-</button>
+                        </a>
                         <?php 
                             $ProductQuantity =  $row['ProductQuantity'];
                             echo $ProductQuantity
                         ?>
+                        <a href="../pay/addcart.php?id=<?php echo $id?>&cid=<?php echo $s1; ?>&value=<?php echo 0?>"  style="text-decoration: none;">
+                            <button class="btn__buy-lable-small--btn">+</button>
+                        </a>
                         </div>
                         <div class="c3">
                         <?php

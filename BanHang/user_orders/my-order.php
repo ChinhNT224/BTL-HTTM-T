@@ -15,7 +15,6 @@ include ('../header_footer/user_header.php');
         table {
             counter-reset: row-number;
         }
-
         .row-number:before {
             counter-increment: row-number;
             content: counter(row-number);
@@ -58,10 +57,10 @@ include ('../header_footer/user_header.php');
                                 while ($row = mysqli_fetch_array($all_products)) { 
                                 $code = strtoupper($row['OrderID']);
                                 ?>
-                                <th class="row-number"><a href='order-details.php'></a></th>
-                                <th><a href='order-details.php'><?php echo $code;?></a></th>
-                                <th><a href='order-details.php'><?php echo $row['OrderDate'];?></a></th>
-                                <th><a href='order-details.php'><?php echo $row['Cost'];?></a></th>
+                                <th class="row-number"></a></th>
+                                <th><?php echo $code;?></a></th>
+                                <th><?php echo $row['OrderDate'];?></a></th>
+                                <th><?php echo $row['Cost'];?></a></th>
                             </tbody>
                             <?php } ?>
                         </table>

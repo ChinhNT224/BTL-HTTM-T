@@ -111,7 +111,7 @@ include '../header_footer/admin_header.php';
 
                                 <th>
                                     <a href=""><button type="button" class="fa fa-eye"></button></a>
-                                    <a href=""><button type="button" class="fa fa-pencil-square-o"></button></a>
+                                    <a href="edit_basic.php?cid=<?php echo $row['CategoryID']; ?>"><button type="button" class="fa fa-pencil-square-o"></button></a>
                                     <a href="manage_category.php?action=view_pro&delete_product=<?php echo $row['CategoryID']; ?>">
                                         <button type="button" id="delete" class="fa fa-trash-o" onclick='return checkdelete()'></button>
                                         <!-- CALL CHECKDELETE FUNCTION -->

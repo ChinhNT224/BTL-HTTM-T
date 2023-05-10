@@ -9,8 +9,8 @@
 			<ul>
 				<li>
 					<a href="../admin_account/admin_homepage.php">
-                        <img src="../images/logo-an-vat.png" width="58px" height="58px" class="logopic">
-						<span class="title"><h2>FOOD WORLD</h2></span>
+                        <img src="../images/restaurant.png" width="58px" height="58px" class="logopic">
+						<span class="title"><h2>PTITCuisine</h2></span>
 					</a>
 				</li>
 				<li>
